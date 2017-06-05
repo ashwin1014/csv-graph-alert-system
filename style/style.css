@@ -1,0 +1,21 @@
+
+.alert{
+  display: none;
+}
+
+
+.dlg {
+
+    
+    z-index: 1;
+    left: 0;
+    top: 10px;
+    width: 30%;
+    height: 400px;
+    overflow-y: scroll;
+    
+    background-color: rgb(220, 223, 229); 
+    border-style: groove;
+    border-radius: 5px;
+    
+}

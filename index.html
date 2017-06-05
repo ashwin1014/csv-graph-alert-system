@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TFS</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style/c3.min.css">
+    <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/c3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.2/papaparse.min.js"></script>
+</head>
+
+<body>
+    <br><br><br>
+    <div class="container" style="height:40%;">
+        <div class="row">
+            <div class="col-sm-8">
+                <!--        <h4 class="col-sm-2" style="top:30px">Priority<span class="glyphicon glyphicon-arrow-up"></span></h4>-->
+                <div class="col-lg-10" style="left:-65px">
+                    <div id="chart"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 dlg">
+                <ul id="try" class="list-group">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="container" style="margin-left: 600px;">
+        <h4>Product <span class="glyphicon glyphicon-arrow-right"></span></h4>
+    </div>
+-->
+
+    <br><br><br>
+    <div class="container">
+
+        <button id="clk" class="btn btn-primary">Generate Notification</button>
+
+        <div id="dat" class="alert alert-danger">
+            <!--<strong>Alert!</strong>Error Data-->
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!--Scripts-->
+
+    <script src="js/create-graph.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/ion.sound.min.js"></script>
+    <script src="./js/notify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/script.js"></script>
+    <!--
+    <script>
+        $(document).ready(function () {
+            ion.sound({
+                sounds: [
+
+                      { name: "glass" }
+                ],
+
+                path: "ring/",
+                preload: false,
+                volume: 10.0
+            });
+            $('button').click(function () {
+                $(".alert").fadeIn("slow");
+
+                $(".alert").fadeOut(4000);
+                ion.sound.play("glass");
+            })
+        });
+    </script>
+-->
+</body>
+
+</html>
