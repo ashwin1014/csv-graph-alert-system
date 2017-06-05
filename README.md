@@ -14,8 +14,8 @@ To run the application use a web server like IIS
 
 or
 
-python -m SimpleHttpServer //for python2
-pythom -m http.server     //for python3
+python -m SimpleHttpServer //for python2,
+pythom -m http.server     //for python3,
 
 or npm install live-server
 or npm install http-server and run it from a terminal
