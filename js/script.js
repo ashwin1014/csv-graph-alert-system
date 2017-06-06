@@ -35,6 +35,6 @@ $(document).ready(function() {
         $(".alert").fadeIn("fast").fadeOut(5000, function() {
             $('#try').append('<li class="list-group-item">' + $('#dat').html() + '</li>');
         });
-    }, 8000);
+    }, 10000);
 
 });

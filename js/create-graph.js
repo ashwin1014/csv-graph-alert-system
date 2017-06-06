@@ -1,11 +1,18 @@
 function parseData(createGraph) {
-    Papa.parse("../data.csv", {
-        download: true,
-        complete: function(results) {
-            console.log(results.data);
-            createGraph(results.data);
-        }
-    });
+    var choice = prompt("1.All Products\n2.Manage\n3.Control\n4.Inspect");
+    if (choice == 1) {
+        //  Papa.parse(url,{
+        Papa.parse("../data.csv", {
+            download: true,
+            complete: function(results) {
+                console.log(results.data);
+                createGraph(results.data);
+            }
+        });
+
+    } else {
+        alert("file currently not present!");
+    }
 }
 
 function createGraph(data) {
