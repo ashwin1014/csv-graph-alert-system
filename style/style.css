@@ -1,21 +1,30 @@
-
-.alert{
-  display: none;
+.alert {
+    display: none;
 }
 
-
 .dlg {
-
-    
     z-index: 1;
     left: 0;
     top: 10px;
     width: 30%;
     height: 400px;
     overflow-y: scroll;
-    
-    background-color: rgb(220, 223, 229); 
+    background-color: rgb(220, 223, 229);
     border-style: groove;
     border-radius: 5px;
-    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2
 }

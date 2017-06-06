@@ -1,3 +1,5 @@
+/*------------------------------------------------------*/
+
 function parseData(createGraph) {
     var choice = prompt("1.All Products\n2.Manage\n3.Control\n4.Inspect");
     if (choice == 1) {
