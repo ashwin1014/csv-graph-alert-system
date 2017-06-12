@@ -4,89 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <title>TFS</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="style/c3.min.css">
     <link rel="stylesheet" href="style/style.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="js/c3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.2/papaparse.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
 </head>
 
 <body>
-    <br><br><br>
-    <div class="container" style="height:40%;">
+    <div class="container-fluid" style="background-color:#eaf7f6">
         <div class="row">
-            <div class="col-sm-8">
-                <!--        <h4 class="col-sm-2" style="top:30px">Priority<span class="glyphicon glyphicon-arrow-up"></span></h4>-->
-                <div class="col-lg-10" style="left:-65px">
-                    <div id="chart"></div>
-                    <br>
+            <h1 style="text-align: center;">Defects Dashboard</h1>
+        </div>
+        <div class="row pull-right">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+
+
+
+    </div>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Product/priority table-->
                     <div style="overflow-x:auto;" id="range" class="table-responsive"></div>
                 </div>
-            </div>
-            <div class="col-sm-4 dlg">
-                <ul id="try" class="list-group">
+                <div class="col-md-4">
+                    <!--date picker table table-->
+                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+                        <i class="glyphicon glyphicon-calendar"></i>&nbsp;
+                        <span></span> <b class="caret"></b>
+                    </div>
+                </div>
 
-                </ul>
+                <div class="col-md-4 dlg">
+                    <!--Alert Stack-->
+                    <ul id="try" class="list-group">
+
+                    </ul>
+                </div>
+
             </div>
         </div>
-    </div>
-    <!--
+
+
+        <br><br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--        <h4 class="col-sm-2" style="top:30px">Priority<span class="glyphicon glyphicon-arrow-up"></span></h4>-->
+                    <div class="col-lg-10" style="left:-65px">
+                        <div id="chart"></div>
+                        <br>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--
     <div class="container" style="margin-left: 600px;">
         <h4>Product <span class="glyphicon glyphicon-arrow-right"></span></h4>
     </div>
 -->
 
-    <br><br><br>
-    <div class="container">
+        <div class="container">
+            <div id="dat" class="alert alert-danger">
 
-        <!--<button id="clk" class="btn btn-primary">Generate Notification</button>-->
-
-        <div id="dat" class="alert alert-danger">
-            <!--<strong>Alert!</strong>Error Data-->
-
+            </div>
         </div>
-
     </div>
 
 
-
-
-
     <!--Scripts-->
-
+    <script src="js/clock_date.js"></script>
     <script src="js/create-graph.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./js/ion.sound.min.js"></script>
     <script src="./js/notify.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
     <script src="js/script.js"></script>
-    <!--
-    <script>
-        $(document).ready(function () {
-            ion.sound({
-                sounds: [
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <script src="./js/datepick.js"></script>
 
-                      { name: "glass" }
-                ],
-
-                path: "ring/",
-                preload: false,
-                volume: 10.0
-            });
-            $('button').click(function () {
-                $(".alert").fadeIn("slow");
-
-                $(".alert").fadeOut(4000);
-                ion.sound.play("glass");
-            })
-        });
-    </script>
--->
 </body>
 
 </html>

@@ -1,24 +1,22 @@
 /*------------------------------------------------------*/
+//var choice = prompt("1.All Products\n2.SW\n3.Bugs\n");
+
 
 function parseData(createGraph) {
-    var choice = prompt("1.All Products\n2.Manage\n3.Control\n4.Inspect");
-    if (choice == 1) {
-        //  Papa.parse(url,{
-        Papa.parse("../data.csv", {
-            download: true,
-            complete: function(results) {
-                console.log(results.data);
-                createGraph(results.data);
-            }
-        });
+    //  Papa.parse(url,{
+    Papa.parse("../data.csv", {
+        download: true,
+        complete: function(results) {
+            console.log(results.data);
+            createGraph(results.data);
+        }
+    });
 
-    } else {
-        alert("file currently not present!");
-    }
 }
 
+
 function createGraph(data) {
-    // var product = [];
+    // var product  = [];
     // var product1 = [];
     // var product2 = [];
     // var product3 = [];
@@ -60,6 +58,8 @@ function createGraph(data) {
         }
 
     }
+
+
     // for (var i = 0; i < data.length; i++) {
     //     if (data[i][1])
     //         product1.push(data[i][1]);
@@ -124,3 +124,20 @@ function createGraph(data) {
 }
 
 parseData(createGraph);
+
+
+d3.text("data.csv", function(data) {
+    var parsedCSV = d3.csv.parseRows(data);
+
+    var container = d3.select("#range")
+        .append("table")
+
+    .selectAll("tr")
+        .data(parsedCSV).enter()
+        .append("tr")
+
+    .selectAll("td")
+        .data(function(d) { return d; }).enter()
+        .append("td")
+        .text(function(d) { return d; });
+});
